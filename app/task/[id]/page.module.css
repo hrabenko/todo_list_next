@@ -1,0 +1,43 @@
+.main {
+    padding: 40px;
+    color: #F26A8D;
+    font-family: serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    background-color: #F26A8D;
+    color: white;
+    font-family: serif;
+    font-size: 16px;
+    padding: 10px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    border: 2px solid #F26A8D;
+    background-color: white;
+    color: #F26A8D;
+}
+
+.main h1 {
+    margin: 20px 0;
+    max-width: 500px;
+}
+
+.main .content {
+    padding: 20px;
+    border: 2px solid #F26A8D;
+    border-radius: 10px;
+    width: 500px;
+}
+
+.main hr {
+    border-top: 1px solid #F26A8D;
+    margin: 20px 0;
+}
