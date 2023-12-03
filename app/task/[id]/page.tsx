@@ -3,8 +3,12 @@ import styles from './page.module.css';
 
 // @ts-ignore
 export default function TaskDetails({ params } ) {
-    // @ts-ignore
-    const taskList = JSON.parse(localStorage.getItem("taskList")) || [];
+    let taskList = [];
+
+    if (typeof window !== 'undefined') {
+        // @ts-ignore
+        taskList = JSON.parse(localStorage.getItem("taskList")) || [];
+    }
 
     const currentTask = taskList.find((task: any) => task.id === String(params.id));
 

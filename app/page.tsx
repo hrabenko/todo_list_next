@@ -15,9 +15,12 @@ export default function Home() {
         isDone: boolean,
     }
 
-
-    // @ts-ignore
-    const [taskList, setTaskList] = useState<Task[]>(JSON.parse(localStorage.getItem("taskList")) || []);
+    let getTaskList = []
+    if (typeof window !== 'undefined') {
+        // @ts-ignore
+        getTaskList = JSON.parse(localStorage.getItem("taskList"));
+    }
+    const [taskList, setTaskList] = useState<Task[]>(getTaskList || []);
     const [taskTitle, setTaskTitle] = useState("");
     const [taskDescription, setTaskDescription] = useState("");
     const [search, setSearch] = useState("");
