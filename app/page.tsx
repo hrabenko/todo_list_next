@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image'
 import styles from './page.module.css'
 import Task from './components/Task'
 import {nanoid} from 'nanoid';
@@ -17,6 +16,7 @@ export default function Home() {
     }
 
 
+    // @ts-ignore
     const [taskList, setTaskList] = useState<Task[]>(JSON.parse(localStorage.getItem("taskList")) || []);
     const [taskTitle, setTaskTitle] = useState("");
     const [taskDescription, setTaskDescription] = useState("");
